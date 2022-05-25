@@ -42,13 +42,18 @@ const Name = () => {
 }
 const Designation = () => {
 		return (
-				<p>Web Developer</p>
+				<p style={{color:'#777',fontStyle:'italic'}}>Web Developer</p>
 		)
+}
+
+let inlineStyle = {
+	color:'red',
+	fontWeight: 'bold'
 }
 
 const Email = () => {
 		return (
-				<p>hello@sajib.me</p>
+				<p style={inlineStyle}>hello@sajib.me</p>
 		)
 }
 
