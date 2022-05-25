@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// CSS
+import './index.css'
+
 // JSX Rules
 // return single element
 // div / section / article or Fragment
@@ -23,17 +26,18 @@ function Gretting() {
 const Person = () => {
 		return (
 				<>
-					<Name/>
-					<Designation/>
-					<Email/>
-					<Seperator/>
+					<section>
+						<Name/>
+						<Designation/>
+						<Email/>
+					</section>
 				</>
 		)
 }
 
 const Name = () => {
 		return (
-				<p>Sajib Talukder</p>
+				<h4>Sajib Talukder</h4>
 		)
 }
 const Designation = () => {
@@ -45,11 +49,6 @@ const Designation = () => {
 const Email = () => {
 		return (
 				<p>hello@sajib.me</p>
-		)
-}
-const Seperator = () => {
-		return (
-				<hr/>
 		)
 }
 
