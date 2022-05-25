@@ -26,7 +26,10 @@ function Gretting() {
 	return (
 		<>
 			<div className='persons-list'>
-				<Person name={personName} position={personDesignation}/>
+				<Person name={personName} position={personDesignation}>
+					<p>You don’t need to install or configure tools like webpack or Babel.
+					They are preconfigured and hidden so that you can focus on the code.</p>
+				</Person>
 				<Person name={personName} position={personDesignation}/>
 				<Person name={personName} position={personDesignation}/>
 				<Person name={personName} position={personDesignation}/>
@@ -35,7 +38,7 @@ function Gretting() {
 	);
 }
 
-const Person = ({name,position}) => {
+const Person = ({name,position,children}) => {
 	 // const {name,position} = props
 		return (
 				<>
@@ -43,6 +46,7 @@ const Person = ({name,position}) => {
 							<h4>{name}</h4>
 							<p style={{color:'#777',fontStyle:'italic'}}>{position}</p>
 							<p style={inlineStyle}>hello@sajib.me</p>
+							{children}
 					</section>
 				</>
 		)
