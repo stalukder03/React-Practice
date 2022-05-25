@@ -25,10 +25,12 @@ const inlineStyle = {
 function Gretting() {
 	return (
 		<>
-			<Person name={personName} position={personDesignation}/>
-			<Person name={personName} position={personDesignation}/>
-			<Person name={personName} position={personDesignation}/>
-			<Person name={personName} position={personDesignation}/>
+			<div className='persons-list'>
+				<Person name={personName} position={personDesignation}/>
+				<Person name={personName} position={personDesignation}/>
+				<Person name={personName} position={personDesignation}/>
+				<Person name={personName} position={personDesignation}/>
+			</div>
 		</>
 	);
 }
