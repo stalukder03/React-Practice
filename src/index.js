@@ -12,6 +12,11 @@ import './index.css'
 // close every element //cee
 // formatting
 
+// setup vars
+
+const personName = 'Sajib Talukder'
+const personDesignation = 'Web Developer'
+
 function Gretting() {
 	return (
 		<>
@@ -34,15 +39,15 @@ const Person = () => {
 				</>
 		)
 }
-
 const Name = () => {
 		return (
-				<h4>Sajib Talukder</h4>
+				<h4>{personName}</h4>
 		)
 }
+
 const Designation = () => {
 		return (
-				<p style={{color:'#777',fontStyle:'italic'}}>Web Developer</p>
+				<p style={{color:'#777',fontStyle:'italic'}}>{personDesignation.toUpperCase()}</p>
 		)
 }
 
