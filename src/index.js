@@ -13,20 +13,43 @@ function Gretting() {
 	return (
 		<>
 			<Person/>
-			<Message/>
+			<Person/>
+			<Person/>
+			<Person/>
 		</>
 	);
 }
 
 const Person = () => {
 		return (
-				<h4>Sajib Talukder</h4>
+				<>
+					<Name/>
+					<Designation/>
+					<Email/>
+					<Seperator/>
+				</>
 		)
 }
 
-const Message = () => {
+const Name = () => {
 		return (
-				<p>Welcome to you</p>
+				<p>Sajib Talukder</p>
+		)
+}
+const Designation = () => {
+		return (
+				<p>Web Developer</p>
+		)
+}
+
+const Email = () => {
+		return (
+				<p>hello@sajib.me</p>
+		)
+}
+const Seperator = () => {
+		return (
+				<hr/>
 		)
 }
 
