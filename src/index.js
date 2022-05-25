@@ -33,13 +33,13 @@ function Gretting() {
 	);
 }
 
-const Person = (props) => {
-	console.log(props)
+const Person = ({name,position}) => {
+	 // const {name,position} = props
 		return (
 				<>
 					<section>
-							<h4>{props.name}</h4>
-							<p style={{color:'#777',fontStyle:'italic'}}>{props.position}</p>
+							<h4>{name}</h4>
+							<p style={{color:'#777',fontStyle:'italic'}}>{position}</p>
 							<p style={inlineStyle}>hello@sajib.me</p>
 					</section>
 				</>
