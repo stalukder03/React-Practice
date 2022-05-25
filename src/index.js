@@ -22,31 +22,39 @@ const inlineStyle = {
 	fontWeight: 'bold'
 }
 
+const persons = [
+	{
+		name: 'Sajib Talukder',
+		position: 'Web Developer',
+		email: 'hello@sajib.me'
+	},
+	{
+		name: 'Samia',
+		position: 'Software Engineer',
+		email: 'samia@sajib.me'
+	}
+]
+
 function Gretting() {
 	return (
 		<>
 			<div className='persons-list'>
-				<Person name={personName} position={personDesignation}>
-					<p>You don’t need to install or configure tools like webpack or Babel.
-					They are preconfigured and hidden so that you can focus on the code.</p>
-				</Person>
-				<Person name={personName} position={personDesignation}/>
-				<Person name={personName} position={personDesignation}/>
-				<Person name={personName} position={personDesignation}/>
+				{persons.map(person => {
+					return <Person person={person}/>
+				})}
 			</div>
 		</>
 	);
 }
 
-const Person = ({name,position,children}) => {
-	 // const {name,position} = props
+const Person = ({person:{name,position,email}}) => {
+	 // const {name,position,email} = props.person
 		return (
 				<>
 					<section>
 							<h4>{name}</h4>
 							<p style={{color:'#777',fontStyle:'italic'}}>{position}</p>
-							<p style={inlineStyle}>hello@sajib.me</p>
-							{children}
+							<p style={inlineStyle}>{email}</p>
 					</section>
 				</>
 		)
