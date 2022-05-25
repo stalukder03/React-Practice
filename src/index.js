@@ -17,48 +17,32 @@ import './index.css'
 const personName = 'Sajib Talukder'
 const personDesignation = 'Web Developer'
 
-function Gretting() {
-	return (
-		<>
-			<Person/>
-			<Person/>
-			<Person/>
-			<Person/>
-		</>
-	);
-}
-
-const Person = () => {
-		return (
-				<>
-					<section>
-						<Name/>
-						<Designation/>
-						<Email/>
-					</section>
-				</>
-		)
-}
-const Name = () => {
-		return (
-				<h4>{personName}</h4>
-		)
-}
-
-const Designation = () => {
-		return (
-				<p style={{color:'#777',fontStyle:'italic'}}>{personDesignation.toUpperCase()}</p>
-		)
-}
-
-let inlineStyle = {
+const inlineStyle = {
 	color:'red',
 	fontWeight: 'bold'
 }
 
-const Email = () => {
+function Gretting() {
+	return (
+		<>
+			<Person name={personName} position={personDesignation}/>
+			<Person name={personName} position={personDesignation}/>
+			<Person name={personName} position={personDesignation}/>
+			<Person name={personName} position={personDesignation}/>
+		</>
+	);
+}
+
+const Person = (props) => {
+	console.log(props)
 		return (
-				<p style={inlineStyle}>hello@sajib.me</p>
+				<>
+					<section>
+							<h4>{props.name}</h4>
+							<p style={{color:'#777',fontStyle:'italic'}}>{props.position}</p>
+							<p style={inlineStyle}>hello@sajib.me</p>
+					</section>
+				</>
 		)
 }
 
