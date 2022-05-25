@@ -12,10 +12,22 @@ import ReactDOM from 'react-dom';
 function Gretting() {
 	return (
 		<>
-			<h1>Welcome to React basic practice.</h1>
-			<input type="text" name="" id="" />
+			<Person/>
+			<Message/>
 		</>
 	);
+}
+
+const Person = () => {
+		return (
+				<h4>Sajib Talukder</h4>
+		)
+}
+
+const Message = () => {
+		return (
+				<p>Welcome to you</p>
+		)
 }
 
 ReactDOM.render(<Gretting />, document.getElementById('root'));
